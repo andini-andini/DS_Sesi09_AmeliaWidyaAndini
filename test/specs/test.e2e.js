@@ -37,4 +37,11 @@ describe('Swag Labs', () => {
         await HomePage.validateHomePage()
         await browser.pause(1000);
     })
+
+    it('should login with visual_user credentials', async () => {
+        await LoginPage.open()
+        await LoginPage.loginVisualUser()
+        await HomePage.validateHomePage()
+        await browser.pause(1000);
+    })
 })
