@@ -48,6 +48,12 @@ class LoginPage extends Page {
         await this.btnLogin.click();
     }
 
+    async loginErrorUser() {
+        await this.fieldUsername.setValue(process.env.USERNAME_ERROR_USER);
+        await this.fieldPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
+        await this.btnLogin.click();
+    }
+
     open() {
         return super.open('/');
     }
