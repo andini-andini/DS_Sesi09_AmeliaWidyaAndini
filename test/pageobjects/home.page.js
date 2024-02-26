@@ -13,9 +13,9 @@ class HomePage extends Page {
         expect(this.iconCart).toBeDisplayed()
     }
 
-    open() {
-        return super.open('/inventory.html');
-    }
+    // open() {
+    //     return super.open('/inventory.html');
+    // }
 }
 
 export default new HomePage();

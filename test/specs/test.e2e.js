@@ -6,9 +6,12 @@ describe('Swag Labs', () => {
         await LoginPage.open()
         await LoginPage.login()
         await HomePage.validateHomePage()
+        await browser.pause(1000);
     })
 
     it('should get login error with locked_out_user credentials', async () => {
-        //TODO
+        await LoginPage.open()
+        await LoginPage.loginLocked()
+        await LoginPage.validateLockedOutUserError()
     })
 })
