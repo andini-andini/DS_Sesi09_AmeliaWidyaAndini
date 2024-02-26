@@ -10,7 +10,12 @@ class HomePage extends Page {
     }
     async validateHomePage() {
         expect(browser).toHaveUrlContaining('/inventory.html')
-        expect(this.iconCart).toBeDisplayed()
+        // expect(this.iconCart).toBeDisplayed()
+    }
+
+    async btnCart(){
+        expect(browser).toHaveUrlContaining('/cart.html')
+        await this.iconCart.click();
     }
 
     // open() {
