@@ -42,6 +42,12 @@ class LoginPage extends Page {
         await this.btnLogin.click();
     }
 
+    async loginPerformance() {
+        await this.fieldUsername.setValue(process.env.USERNAME_PERFORMANCE_USER);
+        await this.fieldPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
+        await this.btnLogin.click();
+    }
+
     open() {
         return super.open('/');
     }
