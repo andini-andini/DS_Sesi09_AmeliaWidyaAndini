@@ -25,12 +25,19 @@ class LoginPage extends Page {
         await this.btnLogin.click();
     }
 
-    async validateLockedOutUserError() {
-        expect(this.errorLokedUser).toBeDisplayed()
-    }
+    // async validateLockedOutUserError() {
+    //     expect(this.errorLokedUser).toBeDisplayed()
+    // }
 
     async loginLocked() {
         await this.fieldUsername.setValue(process.env.USERNAME_LOCKED_OUT_USER);
+        await this.fieldPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
+        await this.btnLogin.click();
+        expect(this.errorLokedUser).toBeDisplayed()
+    }
+
+    async loginProblem() {
+        await this.fieldUsername.setValue(process.env.USERNAME_PROBLEM_USER);
         await this.fieldPassword.setValue(process.env.PASSWORD_SAUCEDEMO);
         await this.btnLogin.click();
     }
